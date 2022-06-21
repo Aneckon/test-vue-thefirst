@@ -45,9 +45,14 @@
     height: 378px;
     filter: blur(50px);
   }
-  100%{
+  50%{
     width: 578px;
     height: 578px;
+    filter: blur(76px);
+  }
+  100%{
+    width: 378px;
+    height: 378px;
     filter: blur(76px);
   }
 }
