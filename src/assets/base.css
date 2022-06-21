@@ -195,3 +195,78 @@ table {
   background: #000;
   transform: translate(-100%);
 }
+
+
+.menu__burger{
+  display: none;
+}
+
+@media (max-width: 660px) {
+  .main__title {
+    max-width: 333px;
+    margin: 286px auto;
+  }
+  .main__title button {
+    right: 0px;
+  }
+  .main__title h1 {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 110%;
+  }
+  .header__nav-content{
+    padding-top: 150px;
+    display: none;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+    height: 100vh;
+    background: #fff;
+    flex-direction: column;
+    align-items: center;
+    z-index: 111;
+  }
+  .--right{
+    transform: rotate(0);
+  }
+  .--left{
+    transform: rotate(0);
+  }
+  .--bottom{
+    bottom: 0;
+  }
+  .menu__burger{
+    display: block;
+    position: absolute;
+    right: 19px;
+    top: 28px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1111;
+  }
+  .menu__burger::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url('../components/images/menu-burger.svg') no-repeat center;
+  }
+  .open__menu::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url('../components/images/menu-burger__remove.svg') no-repeat center;
+  }
+  .block{
+    display: flex;
+  }
+  .navbar__link{
+    position: relative;
+    margin: 10px;
+  }
+}

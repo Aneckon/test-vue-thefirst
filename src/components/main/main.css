@@ -2,6 +2,7 @@
   height: 100vh;
   padding: 24px 20px 20px 20px;
   position: relative;
+  overflow: hidden;
 }
 .main__logo {
   position: relative;
@@ -136,4 +137,39 @@
   transform: rotate(-26deg);
   -webkit-transform: rotate(-26deg);
   z-index: -2;
+}
+
+@media (max-width: 1360px) {
+  .corner-banner.desktop.top-left {
+    transform: rotate(143deg);
+    -webkit-transform: rotate(143deg);
+    top: 35%;
+    right: -100px;
+    left: 0;
+  }
+  .corner-banner.desktop.bottom-left {
+    transform: rotate(-36deg);
+    -webkit-transform: rotate(-36deg);
+    top: 50%;
+    right: -0;
+    left: -60px;
+  }
+}
+@media (max-width: 1024px) {
+  .corner-banner.desktop.top-left {
+    transform: rotate(133deg);
+    width: 100%;
+    -webkit-transform: rotate(133deg);
+    top: 40%;
+    right: 10px;
+    left: 0px;
+  }
+  .corner-banner.desktop.bottom-left {
+    width: 100%; 
+    transform: rotate(-46deg);
+    -webkit-transform: rotate(-46deg);
+    top: 45%;
+    right: 0;
+    left: 90px;
+  }
 }
