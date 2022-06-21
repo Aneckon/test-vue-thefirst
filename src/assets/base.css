@@ -148,7 +148,7 @@ table {
   -webkit-background-clip: text;
   background-size: 200% 100%;
   background-position: 100%;
-  transition: .5s;
+  transition: 0.5s;
 }
 .navbar__link:hover {
   text-decoration: underline;
@@ -173,24 +173,25 @@ table {
   margin: auto;
   transform: rotate(90deg);
 }
-.--bottom{
+.--bottom {
   position: absolute;
   right: 0;
   left: 0;
   bottom: 19px;
   margin: 0 auto;
 }
-.router-link-active{
+.router-link-active {
   text-decoration: underline;
   background-position: 0 100%;
   color: #fff;
-  animation: animations 2s;
 }
 
-@keyframes animationsMain {
-  0% {
-    
-  }
-  100% {
-  }
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 2s;
+}
+.fade-enter,
+.fade-leave-to {
+  background: #000;
+  transform: translate(-100%);
 }
