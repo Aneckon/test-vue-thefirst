@@ -1,0 +1,236 @@
+.main {
+  height: 100vh;
+  padding: 24px 20px 20px 20px;
+  position: relative;
+}
+.main__menu {
+  position: absolute;
+  left: 20px;
+  top: 24px;
+  cursor: pointer;
+  padding-bottom: 10px;
+  z-index: 11;
+}
+.main__menu:hover .main__menu-dropdown {
+  display: block;
+}
+.main__menu-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: #fff;
+  text-align: center;
+  border-radius: 10px;
+}
+.main__menu-dropdown p {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 0;
+  transition: 0.3s;
+}
+.main__menu-dropdown p:hover {
+  color: rgb(170, 170, 170);
+}
+.main__logo {
+  position: relative;
+  text-align: center;
+}
+/* .main__logo img {
+  animation: animationsImages 4s;
+}
+@keyframes animationsImages {
+  0% {
+    filter: drop-shadow(0px 0px 0px transparent);
+  }
+  100% {
+    filter: drop-shadow(0px 100px 0px red);
+  }
+} */
+.main__title {
+  max-width: 1023px;
+  text-align: center;
+  margin: 271px auto;
+  position: relative;
+}
+.main__title h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 82px;
+  line-height: 110%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #373737;
+  padding-bottom: 58px;
+}
+.main__title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #ffcb46;
+  height: 578px;
+  width: 578px;
+  z-index: -1;
+  border-radius: 50%;
+  animation: animations 4s infinite;
+}
+@keyframes animations {
+  0% {
+    filter: blur(10px);
+  }
+  100% {
+    filter: blur(76px);
+  }
+}
+.main__title button {
+  background: none;
+  border: none;
+  position: absolute;
+  right: 250px;
+}
+.main__title button::after {
+  content: '';
+  position: absolute;
+  left: 0rem;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 8px;
+  height: 8px;
+  background: #000;
+  border-radius: 50%;
+}
+
+/* animations */
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-start {
+  0% {
+    -webkit-transform: translateX(-0%);
+    transform: translateX(-0%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes scroll-start {
+  0% {
+    -webkit-transform: translateX(-0%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-second {
+  0% {
+    -webkit-transform: translateX(-0%);
+    transform: translateX(-0%);
+  }
+  100% {
+    -webkit-transform: translateX(-200%);
+    transform: translateX(-200%);
+  }
+}
+
+@-webkit-keyframes scroll-second {
+  0% {
+    -webkit-transform: translateX(-0%);
+  }
+  100% {
+    -webkit-transform: translateX(-200%);
+  }
+}
+
+.corner-banner {
+  max-width: 100%;
+  z-index: 10;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 110%;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0.1;
+  white-space: nowrap;
+  background: none;
+  color: #000;
+  position: absolute;
+  overflow: hidden;
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+}
+
+.banner {
+  display: inline-block;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: scroll;
+  animation-name: scroll;
+  -webkit-animation-duration: 40s;
+  animation-duration: 40s;
+}
+
+.banner-clone {
+  display: inline-block;
+}
+
+.banner * {
+  padding: 0 0.4em;
+  display: inline-block;
+  white-space: nowrap;
+}
+.corner-banner.desktop.top-left {
+  top: 40%;
+  left: -120px;
+  transform: rotate(154deg);
+  -webkit-transform: rotate(154deg);
+  z-index: -2;
+}
+.corner-banner.desktop.bottom-left {
+  max-width: 108%;
+  top: 45%;
+  right: -120px;
+  transform: rotate(-26deg);
+  -webkit-transform: rotate(-26deg);
+  z-index: -2;
+}
+
+.main__title button svg {
+  transition: 0.4s;
+}
+
+.main__title button svg:hover {
+  transform: rotate(-180deg);
+}
